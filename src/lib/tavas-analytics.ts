@@ -2,9 +2,23 @@ import { CONFIG } from "@/config/config";
 
 declare global {
     interface Window {
-        posthog?: any
-        tavas?: any
+        posthog?: {
+            init: (
+                apiKey: string ,
+                options: {
+                    api_host: string;
+                    autocapture: boolean;
+                    loaded?: (instance: PosthogInstance) => void;
+                }
+            ) => void;
+        };
+        tavas?: PosthogInstance;
     }
+}
+
+// Define a minimal interface for Posthog instance
+interface PosthogInstance {
+    capture: (eventName: string, properties?: Record<string, unknown>) => void;
 }
 
 export function initializeTavasAnalytics() {
@@ -19,10 +33,10 @@ export function initializeTavasAnalytics() {
 
             script.onload = () => {
                 if ( window.posthog ) {
-                    window.posthog.init(CONFIG.analytics.tavas.apiKey, {
-                        api_host: CONFIG.analytics.tavas.host,
+                    window.posthog.init(CONFIG.analytics.tavas.apiKey!, {
+                        api_host: CONFIG.analytics.tavas.host!,
                         autocapture: false,
-                        loaded: (posthogInstance: any) => {
+                        loaded: (posthogInstance: PosthogInstance) => {
                             console.log("Tavas Analytics initialized")
                             window.tavas = posthogInstance
                         },
@@ -43,7 +57,7 @@ export function initializeTavasAnalytics() {
     }
 }
 
-export function trackEvent(eventName: string, properties: Record<string, any> = {}) {
+export function trackEvent(eventName: string, properties: Record<string, never> = {}) {
     if ( typeof window === 'undefined' ) return; // Ensure client-side
 
     // Track with Tavas Analytics

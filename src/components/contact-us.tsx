@@ -51,6 +51,7 @@ export default function ContactDialog() {
     function onSubmit(values: FormValues) {
         // trackEvent('Custom Pricing Requested', values);
 
+        console.log(values)
         // Show success toast
         toast.success(`Thank you! Your request has been submitted successfully. We'll get in touch with you soon.`);
 

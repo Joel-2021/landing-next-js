@@ -8,28 +8,6 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import path from "path";
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-} from "@/components/ui/dialog"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import {
-    Form,
-    FormControl,
-    FormDescription,
-    FormField,
-    FormItem,
-    FormLabel,
-    FormMessage,
-} from "@/components/ui/form"
-
-
-import { z } from "zod"
 
 export default function Pricing({ subscriptionPackages }: { subscriptionPackages: SubscriptionPlan[] }) {
 
@@ -43,12 +21,6 @@ export default function Pricing({ subscriptionPackages }: { subscriptionPackages
             maximumFractionDigits: 1
         }).format(num);
     }
-
-    const formSchema = z.object({
-        username: z.string().min(2, {
-            message: "Username must be at least 2 characters.",
-        }),
-    })
 
 
     return (
