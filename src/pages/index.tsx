@@ -43,7 +43,7 @@ export default function Home() {
 
                     <div className="btn-container">
                         <Button variant="outline">
-                            <Link href={ CONFIG.links.dashboard } target={ "_blank" }>
+                            <Link href={ CONFIG.links.dashboard } target={ "_blank" } className={"h-full w-full flex items-center justify-center"}>
                                 Start Free
                             </Link>
                         </Button>
@@ -297,7 +297,7 @@ export default function Home() {
                     </div>
 
                     <Button variant="outline">
-                        <Link href={ CONFIG.links.dashboard } target={ "_blank" }>
+                        <Link href={ CONFIG.links.dashboard } target={ "_blank" } className={"h-full w-full flex items-center justify-center"}>
                             Start Free
                         </Link>
                     </Button>
