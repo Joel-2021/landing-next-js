@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
+import { CONFIG } from "@/config/config";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Link from "next/link";
@@ -28,8 +29,8 @@ export default function Header() {
         const observer = new IntersectionObserver(
             (entries) => {
                 const visible = entries.find((e) => e.isIntersecting)
-                if (visible) {
-                    const newPath = `/#${visible.target.id}`;
+                if ( visible ) {
+                    const newPath = `/#${ visible.target.id }`;
                     setActivePath(newPath);
                     console.log(newPath);
                 }
@@ -39,7 +40,7 @@ export default function Header() {
 
         sections.forEach((id) => {
             const el = document.getElementById(id)
-            if (el) observer.observe(el)
+            if ( el ) observer.observe(el)
         })
 
         return () => observer.disconnect()
@@ -109,14 +110,7 @@ export default function Header() {
                             </Link>
                         </li>
                         <li>
-                            <a
-                                href="https://docs.chottulink.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="block py-2 px-3 lg:p-0"
-                            >
-                                Developer Guide
-                            </a>
+                            <Link href={ CONFIG.links.docs } target="_blank">Developer Guide</Link>
                         </li>
                         <li>
                             <Link href="/pricing"
@@ -134,7 +128,9 @@ export default function Header() {
                     {/* CTA Button */ }
                     <div className="flex items-center z-40 gap-x-4 justify-around btn-container mt-4 lg:mt-0">
                         <Button variant="default" size='lg' aria-label="Get Started">
-                            Get Started
+                            <Link href={ CONFIG.links.dashboard } target={ "_blank" }>
+                                Get Started
+                            </Link>
                         </Button>
                     </div>
                 </div>

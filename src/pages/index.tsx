@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { CONFIG } from "@/config/config";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 
 export default function Home() {
@@ -10,21 +12,21 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>{title}</title>
-                <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="description" content={metaDesctiption} />
-                <meta name="author" content="ChottuLink" />
+                <title>{ title }</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <meta name="description" content={ metaDesctiption }/>
+                <meta name="author" content="ChottuLink"/>
 
-                {/* Open Graph */}
-                <meta property="og:title" content={title} />
-                <meta property="og:description" content={metaDesctiption} />
-                <meta property="og:type" content="article" />
-                <meta property="og:site_name" content="ChottuLink" />
+                {/* Open Graph */ }
+                <meta property="og:title" content={ title }/>
+                <meta property="og:description" content={ metaDesctiption }/>
+                <meta property="og:type" content="article"/>
+                <meta property="og:site_name" content="ChottuLink"/>
 
-                {/* Twitter */}
-                <meta name="twitter:card" content="summary" />
-                <meta name="twitter:title" content={title} />
-                <meta name="twitter:description" content={metaDesctiption} />
+                {/* Twitter */ }
+                <meta name="twitter:card" content="summary"/>
+                <meta name="twitter:title" content={ title }/>
+                <meta name="twitter:description" content={ metaDesctiption }/>
             </Head>
 
             <section id="home" className="sm:columns-2 mt-8 flex items-center flex-col sm:flex-row scroll-mt-30">
@@ -41,7 +43,9 @@ export default function Home() {
 
                     <div className="btn-container">
                         <Button variant="outline">
-                            Start Free
+                            <Link href={ CONFIG.links.dashboard } target={ "_blank" }>
+                                Start Free
+                            </Link>
                         </Button>
                     </div>
                 </div>
@@ -293,7 +297,9 @@ export default function Home() {
                     </div>
 
                     <Button variant="outline">
-                        Start Free
+                        <Link href={ CONFIG.links.dashboard } target={ "_blank" }>
+                            Start Free
+                        </Link>
                     </Button>
                 </div>
             </section>

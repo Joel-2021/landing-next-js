@@ -1,3 +1,4 @@
+import { CONFIG } from "@/config/config";
 import Link from "next/link";
 
 export default function Footer() {
@@ -28,14 +29,7 @@ export default function Footer() {
                 <li className="hidden sm:block">|</li>
 
                 <li>
-                    <a
-                        href="https://docs.chottulink.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-sm hover:text-gray-500"
-                    >
-                        Docs
-                    </a>
+                    <Link href={CONFIG.links.docs} target="_blank">Docs</Link>
                 </li>
             </ul>
         </footer>
