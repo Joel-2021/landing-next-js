@@ -1,0 +1,154 @@
+{
+  "showUpgrade": false,
+  "subscriptionPackDetailsResponses": [
+    {
+      "basePrice": 0.0,
+      "currency": {
+        "code": "USD",
+        "name": "US Dollar",
+        "symbol": "$"
+      },
+      "deleted": false,
+      "description": "Forever Free Pack (upto 25K MAU)",
+      "durationDays": 30,
+      "durationDaysText": "Thirty Days",
+      "id": "68126c280000000000000000",
+      "isActive": false,
+      "isApplicableToPurchase": true,
+      "listedPrice": 0.0,
+      "mau": 25000,
+      "packBenefits": [
+        "✅ Free upto 25K MAU",
+        "✅ 1 Android and iOS app",
+        "✅ Unlimited Deeplinks via SDK",
+        "✅ Hosted on chottu.link subdomain",
+        "❌ Limited support",
+        "❌ No custom domain"
+      ],
+      "paymentGatewaysAllowed": null,
+      "platforms": [
+        "WEB_CS"
+      ],
+      "product": {
+        "id": null,
+        "priceId": null,
+        "provider": null
+      },
+      "recurringCycleCount": 1,
+      "recurringFrequency": "MONTHLY",
+      "title": "Forever Free Plan"
+    },
+    {
+      "basePrice": 20.0,
+      "currency": {
+        "code": "USD",
+        "name": "US Dollar",
+        "symbol": "$"
+      },
+      "deleted": false,
+      "description": "Premium subscription with additional features",
+      "durationDays": 30,
+      "durationDaysText": "1 month",
+      "id": "682f18abfa15ee0a2b148fbb",
+      "isActive": false,
+      "isApplicableToPurchase": true,
+      "listedPrice": 19.0,
+      "mau": 75000,
+      "packBenefits": [
+        "✅ Upto 75K MAU Supported",
+        "✅ Email support",
+        "✅ Link analytics",
+        "❌ No custom domain"
+      ],
+      "paymentGatewaysAllowed": [
+        "STRIPE_RECURRING"
+      ],
+      "platforms": [
+        "WEB_CS"
+      ],
+      "product": {
+        "id": "prod_SL5i5EXYy2EmLR",
+        "priceId": "price_1RQPX7CoY2pXx5XFX25wsfPU",
+        "provider": "STRIPE_RECURRING"
+      },
+      "recurringCycleCount": 120,
+      "recurringFrequency": "MONTHLY",
+      "title": "Indie"
+    },
+    {
+      "basePrice": 45.0,
+      "currency": {
+        "code": "USD",
+        "name": "US Dollar",
+        "symbol": "$"
+      },
+      "deleted": false,
+      "description": "Premium subscription with all features unlocked",
+      "durationDays": 30,
+      "durationDaysText": "1 month",
+      "id": "682f18dffa15ee0a2b148fbc",
+      "isActive": false,
+      "isApplicableToPurchase": true,
+      "listedPrice": 39.0,
+      "mau": 150000,
+      "packBenefits": [
+        "✅ Upto 150K MAU Supported",
+        "✅ All Indie features",
+        "✅ Custom domain support"
+      ],
+      "paymentGatewaysAllowed": [
+        "STRIPE_RECURRING"
+      ],
+      "platforms": [
+        "WEB_CS"
+      ],
+      "product": {
+        "id": "prod_SL5jYIytwNcAnD",
+        "priceId": "price_1RQPXiCoY2pXx5XFDw66omgQ",
+        "provider": "STRIPE_RECURRING"
+      },
+      "recurringCycleCount": 100,
+      "recurringFrequency": "MONTHLY",
+      "title": "Growth"
+    },
+    {
+      "basePrice": 120.0,
+      "currency": {
+        "code": "USD",
+        "name": "US Dollar",
+        "symbol": "$"
+      },
+      "deleted": false,
+      "description": "Premium subscription with all features unlocked",
+      "durationDays": 30,
+      "durationDaysText": "1 month",
+      "id": "682f1908fa15ee0a2b148fbd",
+      "isActive": false,
+      "isApplicableToPurchase": true,
+      "listedPrice": 99.0,
+      "mau": 500000,
+      "packBenefits": [
+        "✅ Upto 500K MAU Supported",
+        "✅ All Growth features",
+        "✅ Webhook support (coming soon)",
+        "✅ Priority support"
+      ],
+      "paymentGatewaysAllowed": [
+        "RAZORPAY",
+        "STRIPE_RECURRING",
+        "PAYPAL"
+      ],
+      "platforms": [
+        "WEB_CS"
+      ],
+      "product": {
+        "id": "prod_SL5jt2gfPOrsbH",
+        "priceId": "price_1RQPYQCoY2pXx5XFovKhT1VU",
+        "provider": "STRIPE_RECURRING"
+      },
+      "recurringCycleCount": 100,
+      "recurringFrequency": "MONTHLY",
+      "title": "Scale"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+
+.gradient {
+    background: linear-gradient(to right,
+    #256FC3 0%,
+    #F318FF 31%,
+    #DC5217 62%,
+    #F2F20C 83%
+    );
+    background-size: 200%;
+    background-clip: text;
+}
+
+.button-gradient {
+
+    background: linear-gradient(94.42deg, #F53B3B -18.78%, #256FC3 21.41%, #B929DD 57.22%, #FF9D00 105.58%);
+    background-size: 200%;
+    animation: animate-gradient 10s linear infinite;
+}
+
+.active-link {
+    background: linear-gradient(103.28deg, #256FC3 0.5%, #F318FF 30%, #DC5217 98%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    margin: auto;
+    animation: animate-gradient 10s linear infinite;
+    background-size: 200%;
+}
+
+@keyframes animate-gradient {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
