@@ -104,7 +104,7 @@ export default function Header() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/about-us"
+                            <Link href="/about-us" prefetch
                                   className={ `${ (activePath === '/about-us') ? "active-link" : "" } block py-2 px-3 lg:p-0` }>
                                 About Us
                             </Link>
@@ -113,7 +113,7 @@ export default function Header() {
                             <Link href={ CONFIG.links.docs } target="_blank">Developer Guide</Link>
                         </li>
                         <li>
-                            <Link href="/pricing"
+                            <Link href="/pricing" prefetch
                                   className={ `${ (activePath === '/pricing') ? "active-link" : "" } block py-2 px-3 lg:p-0` }>
                                 Pricing
                             </Link>
